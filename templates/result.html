@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Résultats</title>
+    <style>
+        body {
+            background: linear-gradient(120deg, #2980b9, #6dd5fa, #ffffff);
+            height: 100vh;
+            font-family: Arial, sans-serif;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        }
+
+        h1 {
+            color: black;
+            font-weight: 500;
+            opacity: .7;
+            font-size: 2rem;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, .2);
+        }
+
+        p {
+            color: black;
+            font-weight: 500;
+            opacity: .7;
+            font-size: 1.4rem;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, .2);
+        }
+
+        .btn {
+            background-color: #ffffff;
+            border: none;
+            color: #2980b9;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 1.2rem;
+            font-weight: 500;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn:hover {
+            background-color: #6dd5fa;
+            color: #ffffff;
+        }
+
+        .logo {
+            max-width: 500px;
+            max-height: 500px;
+            display: block;
+            margin: 0 auto;
+            margin-top: -30px;
+        }
+    </style>
+</head>
+<body>
+    <img class="logo" src="https://benjouid.com/wp-content/uploads/2023/06/logo_ministere-removebg-preview.png" alt="Logo du Ministère" />
+    <h1>Résultats</h1>
+   
+
+    {% if autorisations_ES is not none %}
+    <p>Nombre d'autorisations ES ({{ annee }}) = {{ autorisations_ES }}</p>
+    {% endif %}
+
+   
+
+    {% if autorisations_MA is not none %}
+    <p>Nombre d'autorisations MA ({{ annee }}) = {{ autorisations_MA }}</p>
+    {% endif %}
+</body>
+</html>

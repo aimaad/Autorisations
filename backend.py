@@ -36,14 +36,14 @@ def calculate():
 
         if choix == 'ES':
             exportation_TIR = calculExportationTIR(annee, exportation_TIR_2022, DE_2022, taux_evolutionES)
-            autorisations_ES = Decimal(exportation_TIR * 0.0318 - 36811).quantize(Decimal('0.0'), rounding=ROUND_HALF_UP)
+            autorisations_ES = Decimal(exportation_TIR * 0.0318 - 36811).quantize(Decimal('0'), rounding=ROUND_HALF_UP)
             importation_TIR = None
             autorisations_MA = None
         elif choix == 'MA':
             exportation_TIR = None
             autorisations_ES = None
             importation_TIR = calculImportationTIR(annee, importation_TIR_2022, DI_2022, taux_evolutionMA)
-            autorisations_MA = Decimal(importation_TIR * 0.0253 - 8609.6).quantize(Decimal('0.0'), rounding=ROUND_HALF_UP)
+            autorisations_MA = Decimal(importation_TIR * 0.0253 - 8609.6).quantize(Decimal('0'), rounding=ROUND_HALF_UP)
         else:
             exportation_TIR = None
             autorisations_ES = None
